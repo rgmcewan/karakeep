@@ -6,7 +6,7 @@ services:
       # By default, the data is stored in a docker volume called "data".
       # If you want to mount a custom directory, change the volume mapping to:
       # - /path/to/your/directory:/data
-      - data:/data
+      - /hoarder:/data
     ports:
       - 3000:3000
     env_file:
@@ -14,7 +14,7 @@ services:
     environment:
       MEILI_ADDR: http://meilisearch:7700
       BROWSER_WEB_URL: http://chrome:9222
-      # OPENAI_API_KEY: ...
+      OPENAI_API_KEY: sk-abcd1234qrstuvwxabcd1234qrstuvwxabcd1234
 
       # You almost never want to change the value of the DATA_DIR variable.
       # If you want to mount a custom directory, change the volume mapping above instead.
